@@ -322,7 +322,7 @@ const updateEvents = (date) => {
     }
   });
 
-  if (events === "") {
+  if (events === "" || eventsDone === "") {
     events = `<div class="no-event">
     <h3>Nothing todo</h3>
   </div>`;
