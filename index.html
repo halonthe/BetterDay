@@ -32,48 +32,7 @@
             <div>sat</div>
           </div>
           <div class="days">
-            <div class="day prev-date">29</div>
-            <div class="day prev-date">30</div>
-            <div class="day prev-date">31</div>
-            <div class="day today event">1</div>
-            <div class="day">2</div>
-            <div class="day">3</div>
-            <div class="day">4</div>
-            <div class="day">5</div>
-            <div class="day">6</div>
-            <div class="day">7</div>
-            <div class="day">8</div>
-            <div class="day">9</div>
-            <div class="day">10</div>
-            <div class="day">11</div>
-            <div class="day active event">12</div>
-            <div class="day">13</div>
-            <div class="day">14</div>
-            <div class="day">15</div>
-            <div class="day">16</div>
-            <div class="day event">17</div>
-            <div class="day">18</div>
-            <div class="day">19</div>
-            <div class="day">20</div>
-            <div class="day">21</div>
-            <div class="day">22</div>
-            <div class="day">23</div>
-            <div class="day">24</div>
-            <div class="day">25</div>
-            <div class="day">26</div>
-            <div class="day">27</div>
-            <div class="day">28</div>
-            <div class="day">29</div>
-            <div class="day">30</div>
-            <div class="day">31</div>
-            <div class="day next-date">1</div>
-            <div class="day next-date">2</div>
-            <div class="day next-date">3</div>
-            <div class="day next-date">4</div>
-            <div class="day next-date">5</div>
-            <div class="day next-date">6</div>
-            <div class="day next-date">7</div>
-            <div class="day next-date">8</div>
+            <!-- content loop with js -->
           </div>
           <div class="goto-today">
             <div class="goto">
@@ -83,6 +42,100 @@
             <button class="today-btn">today</button>
           </div>
         </div>
+      </div>
+      <div class="right">
+        <div class="profile">
+          <img src="profile.jpg" alt="profile" />
+          <div class="info">
+            <div class="name">Yuda Dwi Restika</div>
+            <div class="role">Fullstack Developer</div>
+          </div>
+        </div>
+        <div class="today-date">
+          <div class="event-day"></div>
+          <div class="event-date"></div>
+        </div>
+        <div class="switch-events">
+          <span>todos</span>
+          <input type="checkbox" name="switch" id="done" class="disabled" />
+          <label for="done" class="switch-btn"></label>
+          <span>done</span>
+        </div>
+        <div class="completed disabled">
+          <!-- content loop with js -->
+        </div>
+        <div class="events">
+          <!-- content loop with js -->
+        </div>
+        <div class="add-event-wrapper">
+          <div class="add-event-header">
+            <div class="title">Add Event</div>
+            <i class="fa fa-times close"></i>
+          </div>
+          <div class="add-event-body">
+            <div class="add-event-input">
+              <input type="text" placeholder="Event Name" class="event-name" />
+            </div>
+            <div class="add-event-input">
+              <input
+                type="text"
+                placeholder="Start Time"
+                class="event-time-from"
+              />
+            </div>
+            <div class="add-event-input">
+              <input type="text" placeholder="End Time" class="event-time-to" />
+            </div>
+            <div class="add-event-radio">
+              <div class="priority">
+                <input
+                  type="radio"
+                  value="low"
+                  name="event-type"
+                  id="low"
+                  class="event-type"
+                />
+                <label for="low">Low</label>
+              </div>
+              <div class="radio">
+                <input
+                  type="radio"
+                  value="med"
+                  name="event-type"
+                  id="medium"
+                  class="event-type"
+                />
+                <label for="medium">Medium</label>
+              </div>
+              <div class="radio">
+                <input
+                  type="radio"
+                  value="high"
+                  name="event-type"
+                  id="high"
+                  class="event-type"
+                />
+                <label for="high">High</label>
+              </div>
+            </div>
+            <button class="add-event-btn">Add</button>
+          </div>
+        </div>
+        <button class="add-events">
+          <i class="fas fa-plus"></i>
+        </button>
+        <!-- delete button -->
+        <div class="clear-events-wrapper disabled">
+          <button class="clear-all">
+            <i class="fas fa-trash"></i> Clean Calendar
+          </button>
+          <button class="clear-day">
+            <i class="fas fa-trash"></i> Delete Today's Events
+          </button>
+        </div>
+        <button class="clear-events">
+          <i class="fas fa-trash"></i>
+        </button>
       </div>
     </div>
     <script src="script.js"></script>
