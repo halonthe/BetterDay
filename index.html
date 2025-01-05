@@ -16,6 +16,7 @@
   <body>
     <div class="container">
       <div class="left">
+        <!-- calendar -->
         <div class="calendar">
           <div class="month">
             <i class="fa fa-angle-left prev"></i>
@@ -43,6 +44,7 @@
           </div>
         </div>
       </div>
+      <!-- todo -->
       <div class="right">
         <div class="profile">
           <img src="profile.jpg" alt="profile" />
@@ -57,7 +59,13 @@
         </div>
         <div class="switch-events">
           <span>todos</span>
-          <input type="checkbox" name="switch" id="done" class="disabled" />
+          <input
+            type="checkbox"
+            name="switch"
+            id="done"
+            class="disabled"
+            autocomplete="off"
+          />
           <label for="done" class="switch-btn"></label>
           <span>done</span>
         </div>
@@ -67,6 +75,7 @@
         <div class="events">
           <!-- content loop with js -->
         </div>
+        <!-- add event -->
         <div class="add-event-wrapper">
           <div class="add-event-header">
             <div class="title">Add Event</div>
