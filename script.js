@@ -193,9 +193,6 @@ document.addEventListener("click", (e) => {
   if (e.target !== addEventsBtn && !addEventContainer.contains(e.target)) {
     addEventContainer.classList.remove("active");
   }
-  if (e.target !== clearBtn && !clearContainer.contains(e.target)) {
-    clearContainer.classList.add("disabled");
-  }
 });
 
 // input format
@@ -476,6 +473,8 @@ eventsContainer.addEventListener("click", (e) => {
 clearAllBtn.addEventListener("click", () => {
   // localStorage.removeItem("events");
   eventsArr = [];
+  const activeDayEl = document.querySelector(".day.active");
+  activeDayEl.classList.remove("event");
   updateEvents(activeDay);
 });
 // delete today's events
