@@ -179,16 +179,22 @@ const gotoDate = () => {
 };
 gotoBtn.addEventListener("click", gotoDate);
 
-// show | hide add events form
+// show | hide add events and clear container
 addEventsBtn.addEventListener("click", () => {
   addEventContainer.classList.toggle("active");
 });
 addEventCloseBtn.addEventListener("click", () => {
   addEventContainer.classList.remove("active");
 });
+clearBtn.addEventListener("click", () => {
+  clearContainer.classList.toggle("disabled");
+});
 document.addEventListener("click", (e) => {
   if (e.target !== addEventsBtn && !addEventContainer.contains(e.target)) {
     addEventContainer.classList.remove("active");
+  }
+  if (e.target !== clearBtn && !clearContainer.contains(e.target)) {
+    clearContainer.classList.add("disabled");
   }
 });
 
@@ -326,6 +332,8 @@ const updateEvents = (date) => {
     events = `<div class="no-event">
     <h3>Nothing todo</h3>
   </div>`;
+  }
+  if (eventsDone === "") {
     eventsDone = `<div class="no-event">
     <h3>You haven't done anything yet!</h3>
   </div>`;
@@ -464,14 +472,10 @@ eventsContainer.addEventListener("click", (e) => {
   }
 });
 
-// show | hide delete button
-clearBtn.addEventListener("click", () => {
-  clearContainer.classList.toggle("disabled");
-});
-
 // delete event
 clearAllBtn.addEventListener("click", () => {
-  localStorage.clear();
+  // localStorage.removeItem("events");
+  eventsArr = [];
   updateEvents(activeDay);
 });
 // delete today's events
